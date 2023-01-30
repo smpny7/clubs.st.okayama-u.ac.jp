@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://clubs.st.okayama-u.ac.jp
+
+# Sitemaps
+Sitemap: https://clubs.st.okayama-u.ac.jp/sitemap.xml
