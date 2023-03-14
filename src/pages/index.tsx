@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import ArrowRight from "../../styles/svg/arrow-right.svg";
 import { useLocale } from "../hooks/useLocale";
+import imageLoader from "../utils/image-loader";
 
 const Home: NextPage = () => {
   const { locale, t } = useLocale();
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
       >
         {isLowPowerMode ? (
           <Image
+            loader={imageLoader}
             src="/video/background.webp"
             height={1080}
             width={1920}
@@ -107,6 +109,7 @@ const Home: NextPage = () => {
                 {t.BUTTON_LABEL}
               </span>
               <Image
+                loader={imageLoader}
                 src={ArrowRight}
                 className="w-7 pt-1 sm:w-[45px]"
                 alt={t.ARROW_RIGHT_ALT}
@@ -126,6 +129,7 @@ const Home: NextPage = () => {
         <div className="w-40">
           {isLowPowerMode ? (
             <Image
+              loader={imageLoader}
               src="/video/loading.webp"
               height={540}
               width={462}
